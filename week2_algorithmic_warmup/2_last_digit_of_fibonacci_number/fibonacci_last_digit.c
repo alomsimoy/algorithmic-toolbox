@@ -3,11 +3,12 @@
 
 int get_fibonacci_last_digit_naive(int n)
 {
-    if (n <= 1)
+    if (n <= 1) {
         return n;
+    }
 
-    int previous = 0;
-    int current  = 1;
+    int previous = 0,
+        current  = 1;
 
     for (int i = 0; i < n - 1; ++i) {
         int tmp_previous = previous;
@@ -20,11 +21,12 @@ int get_fibonacci_last_digit_naive(int n)
 
 int get_fibonacci_last_digit_fast(int n)
 {
-    if (n <= 1)
+    if (n <= 1) {
         return n;
+    }
 
-    int previous = 0;
-    int current  = 1;
+    int previous = 0,
+        current  = 1;
 
     for (int i = 0; i < n - 1; ++i) {
         int tmp_previous = previous;
@@ -52,7 +54,7 @@ int main()
 
     // test_solution();
     printf("%d\n", get_fibonacci_last_digit_fast(n));
-    //printf("%d\n", get_fibonacci_last_digit_fast(n));
+    // printf("%d\n", get_fibonacci_last_digit_fast(n));
     return 0;
 }
 
